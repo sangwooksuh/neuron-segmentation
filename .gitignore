@@ -1,6 +1,9 @@
 # Data files
 data/
 
+# Notebook files
+*.ipynb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
