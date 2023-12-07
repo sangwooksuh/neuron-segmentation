@@ -84,14 +84,12 @@ def run(path, neurons, threshold, score):
     print(f'Problem: {path}; Neurons: {neurons}; Threshold: {threshold}')
 
     
-    if recursionlimit := sys.getrecursionlimit() < 1000000:
+    if sys.getrecursionlimit() < 1000000:
         sys.setrecursionlimit(1000000)
         
     data = load_data(path, threshold)
     solutions = solve(data, neurons)
     save_video(path, solutions)
-
-    sys.setrecursionlimit(recursionlimit)
     
     if score:
         evaluate(solutions, path)
