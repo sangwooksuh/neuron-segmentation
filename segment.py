@@ -55,9 +55,9 @@ def solve_kernel(frame, neurons):
     
 def solve(data, neurons):
     
-    print('Segmenting neurons ...')
+    # print('Segmenting neurons ...')
     solutions = [solve_kernel(frame, neurons) for frame in zip(*data)]
-    print('Segmentation complete!')
+    # print('Segmentation complete!')
     
     return solutions
 

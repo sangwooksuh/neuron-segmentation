@@ -35,7 +35,7 @@ def getChannel(img, channel):
 
 def load_data(path, threshold=1):
     
-    print("Loading data ...")
+    # print("Loading data ...")
             
     intensity = [scale(sumChannels(crop(img))) >= threshold 
                  for img in load_video(os.path.join(path,'intensities/'))]
@@ -46,7 +46,7 @@ def load_data(path, threshold=1):
     green = [scale(crop(img)[:,:,1]) >= threshold for img in lifetime]
     blue = [scale(crop(img)[:,:,2]) >= threshold for img in lifetime]
     
-    print("Loading complete!")
+    # print("Loading complete!")
     
     return intensity, gray, red, green, blue
 
