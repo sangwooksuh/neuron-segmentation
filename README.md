@@ -17,7 +17,7 @@ Neuron segmentations in 2pFLIM as binary masks
   
   `-n` , `--neurons`:     Number of neurons in video, default 1
   
-  `-t` , `--threshold:   Threshold value for loading frames as binary images (default 1: pixel values are scaled to zero mean and unit variance)
+  `-t` , `--threshold`:   Threshold value for loading frames as binary images (default 1: pixel values are scaled to zero mean and unit variance)
                      
   `-e`, `--evaluate`:     Get average intersection over union (IOU) score of results with data from `path/ground truth`
 
