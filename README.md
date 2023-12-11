@@ -37,8 +37,40 @@ Calculates average intersection over union (IOU) score with data from `path/grou
 
 ## Getting Started
 
+### From Repository
 0. Open terminal
 1. Clone this repo: `$ git clone git@github.com:sangwooksuh/neuron-segmentation.git`
 2. Naviagate to repo: `$ cd neuron-segmentation`
-3. Try out a demo: `$ ./demo.sh`
+3. Try out a demo: `$ ./demo.sh`, may need to give execute access: `$ chmod +x ./demo/sh`
+
+### From neuron-segmentation.zip file
+0. Unzip
+1. Navigate to directory: `$ cd neuron-segmentation`
+2. Try out a demo: `$ ./demo.sh` may need to give execute access: `$ chmod +x ./demo/sh`
+
+## Dependencies
+ - Python 3.11+
+ - NumPy
+ - natsort
+ - pillow
+
+The conda environment used to develop and test this tool is provided in `environment.yml`
+
+## Known Issues & Bugs
+
+### Recursion depth limit
+
+Typically, Mac Terminal has a recursion depth limit of 1000, which leads to a recursion limit exceeded error with the `flood` function in `conn.py`. On Jupyter notebook, this limit is typically set as 3000, which is sufficient for the images provided (160x160). But for higher resolution images, the `flood` algorithm may hit the recursion limit and produce an error.
+
+
+To mitigate this bug, the program sets the system’s recursion limit to 1,000,000 if it is lower than 1,000,000. 
+
+### Crash when threshold set too high
+
+If a given threshold is so high that there is no object component after thresholding in a given frame, the program crashes because at some point the 2D arrays that represents each frame become flattened, possibly due to some nuances in NumPy default behavior with differing inputs in functions such as bitwise and logical operation related functions. There was not sufficient time to properly identify and address this bug. With given data, thresholds of 1.2 or lower seemed to be safe.
+
+### Border cropping hard-coded
+
+This tool assumes that the image has borders that exactly match the given data, such that the image is contained in rows 40-199 and columns 114-273. The `crop` function in `utils.py` needs to be modified for data with different dimensions or borders than the given data.
+
 
