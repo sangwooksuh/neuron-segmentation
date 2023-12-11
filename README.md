@@ -41,12 +41,12 @@ Calculates average intersection over union (IOU) score with data from `path/grou
 0. Open terminal
 1. Clone this repo: `$ git clone git@github.com:sangwooksuh/neuron-segmentation.git`
 2. Naviagate to repo: `$ cd neuron-segmentation`
-3. Try out a demo: `$ ./demo.sh`, may need to give execute access: `$ chmod +x ./demo/sh`
+3. Try out a demo: `$ ./demo.sh`, you may need to give execute access: `$ chmod +x ./demo/sh`
 
 ### From neuron-segmentation.zip file
 0. Unzip
 1. Navigate to directory: `$ cd neuron-segmentation`
-2. Try out a demo: `$ ./demo.sh` may need to give execute access: `$ chmod +x ./demo/sh`
+2. Try out a demo: `$ ./demo.sh`, you may need to give execute access: `$ chmod +x ./demo/sh`
 
 ### Example Commands
 
