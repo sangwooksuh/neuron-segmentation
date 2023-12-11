@@ -49,12 +49,14 @@ Calculates average intersection over union (IOU) score with data from `path/grou
 2. Try out a demo: `$ ./demo.sh` may need to give execute access: `$ chmod +x ./demo/sh`
 
 ## Dependencies
- - Python 3.11+
+ - Python 3.8+
  - NumPy
  - natsort
  - pillow
 
 The conda environment used to develop and test this tool is provided in `environment.yml`
+
+This tool was developed for use in Mac OS Sonoma 14.1.1 terminal with a python environment with the above dependencies, not tested under other conditions.
 
 ## Known Issues & Bugs
 
