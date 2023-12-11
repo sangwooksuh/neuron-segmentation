@@ -70,7 +70,7 @@ This tool was developed for use in Mac OS Sonoma 14.1.1 terminal with a python e
 
 ## Known Issues & Bugs
 
-### Recursion depth limit
+### Potential recursion depth limit error with large images
 
 Typically, Mac Terminal has a recursion depth limit of 1000, which leads to a recursion limit exceeded error with the `flood` function in `conn.py`. On Jupyter notebook, this limit is typically set as 3000, which is sufficient for the images provided (160x160). But for higher resolution images, the `flood` algorithm may hit the recursion limit and produce an error.
 
