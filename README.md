@@ -85,4 +85,9 @@ If a given threshold is so high that there is no object component after threshol
 
 This tool assumes that the image has borders that exactly match the given data, such that the image is contained in rows 40-199 and columns 114-273. The `crop` function in `utils.py` needs to be modified for data with different dimensions or borders than the given data.
 
+### Minimal bad input handeling
+
+This can be easily mitigated by adding input verification. This was done for command line arguments using the `argparse` module for `segment.py`, but there is no bad input handeling for the video themselves or command line arguments for `evaluate.py`
+
+
 
