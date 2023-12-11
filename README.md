@@ -51,8 +51,11 @@ Calculates average intersection over union (IOU) score with data from `path/grou
 ### Examples
 
 `python segment.py ./data/easy`
+
 `python evaluate.py ./data/easy`
+
 `python segment.py --neurons 2 --threshold 0.5 --evaluate ./data/hard`
+
 `python segment.py -n 2 -t 0.5 --evaluate ./data/hard`
 
 ## Dependencies
